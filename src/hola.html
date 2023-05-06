@@ -1,0 +1,25 @@
+<h1>Hello</h1>
+<a target="_blank" href="https://angular.io/start">
+  Learn more about Angular
+</a>
+<h2>ocupacion {{cargo}}</h2>
+<br />
+<label for="txtA"> A: </label>
+<input type="text" id="txtA" [(ngModel)]="a" />
+<br />
+<label for="txtB"> B: </label>
+<input type="text" id="txtB" [(ngModel)]="b" />
+<br />
+
+<button (click)="calcular()">Calcular +</button>
+<button (click)="calcularR()">Calcular -</button>
+<button (click)="calcularM()">Calcular *</button>
+<h3>Resultado :</h3>
+<p>  Suma {{c}}</p>
+<p>  Resta {{d}}</p>
+<p>  Multiplicacion {{e}}</p>
+
+<app-mycomponent-jq
+  [name]="''+c"
+  (onChildEvent)="onChildEventHandler($event)"
+></app-mycomponent-jq>
